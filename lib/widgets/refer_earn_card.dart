@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,7 +12,7 @@ class ReferEarnCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
         decoration: BoxDecoration(
-          color: const Color(0xFF29D177),
+          color: AppColors.primaryGreen,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
@@ -26,7 +27,7 @@ class ReferEarnCard extends StatelessWidget {
                     style: GoogleFonts.quicksand(
                       fontWeight: FontWeight.w700,
                       fontSize: 18,
-                      color: const Color(0XFFF2F2F2),
+                      color: AppColors.referText,
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -38,7 +39,7 @@ class ReferEarnCard extends StatelessWidget {
                           style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
-                            color: const Color(0XFFF2F2F2),
+                            color: AppColors.referText,
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -55,7 +56,6 @@ class ReferEarnCard extends StatelessWidget {
                 ],
               ),
             ),
-
             Image.asset(
               'assets/images/gift_box.png',
               height: 80,

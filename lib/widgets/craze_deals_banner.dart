@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +15,7 @@ class CrazeDealsBanner extends StatelessWidget {
           Text(
             'Craze deals',
             style: GoogleFonts.quicksand(
-              color: Color(0XFF323232),
+              color: AppColors.primaryText,
               fontSize: 19,
               fontWeight: FontWeight.w700,
             ),
@@ -25,7 +26,7 @@ class CrazeDealsBanner extends StatelessWidget {
             height: 140,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Color(0xFF262626),
+              color: AppColors.bannerDarkBg,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Stack(
@@ -50,7 +51,7 @@ class CrazeDealsBanner extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
                         fontSize: 20,
-                        color: Color(0xFFf2f2f2),
+                        color: AppColors.referText,
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -59,7 +60,7 @@ class CrazeDealsBanner extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
                         fontSize: 20,
-                        color: Color(0xFFf2f2f2),
+                        color: AppColors.referText,
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -70,14 +71,13 @@ class CrazeDealsBanner extends StatelessWidget {
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w600,
                             fontSize: 14,
-                            color: Color(0xFFEA7E00),
+                            color: AppColors.timeOrange,
                           ),
                         ),
                         SizedBox(width: 5),
-                        Image.asset('assets/images/arrow_front.png')
+                        Image.asset('assets/images/arrow_front.png'),
                       ],
                     ),
-                    
                   ],
                 ),
               ],

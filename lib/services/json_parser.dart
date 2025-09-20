@@ -2,7 +2,9 @@ import 'dart:isolate';
 import '../models/notification_model.dart';
 
 class JsonParser {
-  static Future<List<NotificationModel>> parseJsonInIsolate(List<dynamic> jsonData) async {
+  static Future<List<NotificationModel>> parseJsonInIsolate(
+    List<dynamic> jsonData,
+  ) async {
     final receivePort = ReceivePort();
     await Isolate.spawn(_parseJson, [jsonData, receivePort.sendPort]);
     return await receivePort.first as List<NotificationModel>;

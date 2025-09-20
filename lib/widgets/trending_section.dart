@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,7 +22,7 @@ class TrendingSection extends StatelessWidget {
               Text(
                 "Trending",
                 style: GoogleFonts.quicksand(
-                  color: Color(0XFF323232),
+                  color: AppColors.primaryText,
                   fontSize: 19,
                   fontWeight: FontWeight.w700,
                 ),
@@ -29,7 +30,7 @@ class TrendingSection extends StatelessWidget {
               Text(
                 "See all",
                 style: GoogleFonts.quicksand(
-                  color: Color(0XFF06C25E),
+                  color: AppColors.accentGreen,
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                 ),
@@ -52,7 +53,7 @@ class TrendingSection extends StatelessWidget {
             itemBuilder: (context, index) {
               return Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.white,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -71,7 +72,6 @@ class TrendingSection extends StatelessWidget {
                         ),
                       ),
                     ),
-
                     Flexible(
                       flex: 7,
                       child: Padding(
@@ -82,11 +82,19 @@ class TrendingSection extends StatelessWidget {
                           children: [
                             Text(
                               "Mithas Bhandar",
-                              style: GoogleFonts.quicksand(color: Color(0XFF323232), fontSize: 17, fontWeight: FontWeight.w700),
+                              style: GoogleFonts.quicksand(
+                                color: AppColors.primaryText,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                             Text(
                               "Sweets • North Indian",
-                              style: GoogleFonts.quicksand(color: Color(0XFF474747), fontSize: 12, fontWeight: FontWeight.w500),
+                              style: GoogleFonts.quicksand(
+                                color: AppColors.secondaryText,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
@@ -95,7 +103,11 @@ class TrendingSection extends StatelessWidget {
                                 Expanded(
                                   child: Text(
                                     "(Store location) | 6.4 kms",
-                                    style: GoogleFonts.quicksand(color: Color(0XFF474747), fontSize: 12, fontWeight: FontWeight.w500),
+                                    style: GoogleFonts.quicksand(
+                                      color: AppColors.secondaryText,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -104,13 +116,31 @@ class TrendingSection extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Icon(Icons.star, size: 14, color: Color(0xFF474747)),
+                                Icon(
+                                  Icons.star,
+                                  size: 14,
+                                  color: AppColors.ratingGreyTrending,
+                                ),
                                 SizedBox(width: 3),
-                                Text("4.1", style: GoogleFonts.poppins(color: Color(0XFF474747), fontSize: 14, fontWeight: FontWeight.w500)),
+                                Text(
+                                  "4.1",
+                                  style: GoogleFonts.poppins(
+                                    color: AppColors.ratingGreyTrending,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                                 SizedBox(width: 8),
-                                Text('|'),
+                                Text("|"),
                                 SizedBox(width: 8),
-                                Text("45 mins", style: GoogleFonts.poppins(color: Color(0XFF474747), fontSize: 14, fontWeight: FontWeight.w500),),
+                                Text(
+                                  "45 mins",
+                                  style: GoogleFonts.poppins(
+                                    color: AppColors.timeGrey,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                               ],
                             ),
                           ],

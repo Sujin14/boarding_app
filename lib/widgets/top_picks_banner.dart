@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,7 @@ class TopPicksBanner extends StatelessWidget {
         height: 200,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: const Color(0xFF06C25E),
+          color: AppColors.accentGreen,
           borderRadius: BorderRadius.circular(5),
         ),
         child: Stack(
@@ -35,28 +36,44 @@ class TopPicksBanner extends StatelessWidget {
               children: [
                 Text(
                   "DISCOUNT",
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w700),
+                  style: GoogleFonts.poppins(
+                    color: AppColors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 Text(
                   "25% ALL",
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w700),
+                  style: GoogleFonts.poppins(
+                    color: AppColors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 Text(
                   "FRUITS",
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w700),
+                  style: GoogleFonts.poppins(
+                    color: AppColors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 const SizedBox(height: 10),
                 Container(
                   height: 32,
                   width: 130,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFF8918),
+                    color: AppColors.orange,
                     borderRadius: BorderRadius.circular(2),
                   ),
                   child: Center(
                     child: Text(
                       'CHECK NOW',
-                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w600),
+                      style: GoogleFonts.poppins(
+                        color: AppColors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),

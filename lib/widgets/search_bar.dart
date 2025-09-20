@@ -1,6 +1,10 @@
+import 'package:boarding_app/constants/app_colors.dart';
+import 'package:boarding_app/providers/notification_provider.dart';
+import 'package:boarding_app/screens/notifications_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class SearchBarBody extends StatelessWidget {
   const SearchBarBody({super.key});
@@ -18,7 +22,7 @@ class SearchBarBody extends StatelessWidget {
                 hintStyle: GoogleFonts.quicksand(
                   fontWeight: FontWeight.w500,
                   fontSize: 16,
-                  color: Color(0xFF969696),
+                  color: AppColors.hintText,
                 ),
                 filled: true,
                 suffixIcon: Padding(
@@ -29,7 +33,7 @@ class SearchBarBody extends StatelessWidget {
                     width: 20,
                   ),
                 ),
-                fillColor: const Color.fromARGB(255, 231, 229, 229),
+                fillColor: AppColors.searchFill,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide.none,
@@ -38,10 +42,26 @@ class SearchBarBody extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
-          SvgPicture.asset(
-            'assets/images/notifications.svg',
-            height: 24,
-            width: 24,
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChangeNotifierProvider.value(
+                    value: Provider.of<NotificationProvider>(
+                      context,
+                      listen: false,
+                    ),
+                    child: const NotificationsScreen(),
+                  ),
+                ),
+              );
+            },
+            icon: SvgPicture.asset(
+              'assets/images/notifications.svg',
+              height: 24,
+              width: 24,
+            ),
           ),
           const SizedBox(width: 10),
           SvgPicture.asset(

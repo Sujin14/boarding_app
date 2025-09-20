@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,14 +20,14 @@ class NearbyStoresList extends StatelessWidget {
                 style: GoogleFonts.quicksand(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
-                  color: const Color(0xFF323232),
+                  color: AppColors.primaryText,
                 ),
               ),
               Text(
                 "See all",
                 style: GoogleFonts.quicksand(
                   fontSize: 16,
-                  color: const Color(0xFF06C25E),
+                  color: AppColors.accentGreen,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -43,7 +44,7 @@ class NearbyStoresList extends StatelessWidget {
               margin: const EdgeInsets.only(bottom: 12),
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
@@ -75,7 +76,7 @@ class NearbyStoresList extends StatelessWidget {
                           style: GoogleFonts.quicksand(
                             fontSize: 18,
                             fontWeight: FontWeight.w700,
-                            color: const Color(0xFF323232),
+                            color: AppColors.primaryText,
                           ),
                         ),
                         const SizedBox(height: 2),
@@ -90,7 +91,7 @@ class NearbyStoresList extends StatelessWidget {
                                 style: GoogleFonts.quicksand(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
-                                  color: const Color(0xFF474747),
+                                  color: AppColors.secondaryText,
                                 ),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -100,7 +101,7 @@ class NearbyStoresList extends StatelessWidget {
                                 const Icon(
                                   Icons.star,
                                   size: 16,
-                                  color: Color(0xFF505050),
+                                  color: AppColors.ratingGreyNearby,
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
@@ -108,7 +109,7 @@ class NearbyStoresList extends StatelessWidget {
                                   style: GoogleFonts.quicksand(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                    color: const Color(0xFF505050),
+                                    color: AppColors.ratingGreyNearby,
                                   ),
                                 ),
                                 const SizedBox(width: 8),
@@ -117,7 +118,7 @@ class NearbyStoresList extends StatelessWidget {
                                   style: GoogleFonts.quicksand(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                    color: const Color(0xFFEA7E00),
+                                    color: AppColors.timeOrange,
                                   ),
                                 ),
                               ],
@@ -133,7 +134,7 @@ class NearbyStoresList extends StatelessWidget {
                           style: GoogleFonts.quicksand(
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
-                            color: const Color(0xFF474747),
+                            color: AppColors.secondaryText,
                           ),
                         ),
                         const SizedBox(height: 6),
@@ -141,9 +142,11 @@ class NearbyStoresList extends StatelessWidget {
                         // Top Store Badge
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 4),
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
                           decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 193, 191, 191),
+                            color: AppColors.badgeBg,
                             borderRadius: BorderRadius.circular(3),
                           ),
                           child: Text(
@@ -151,13 +154,13 @@ class NearbyStoresList extends StatelessWidget {
                             style: GoogleFonts.quicksand(
                               fontSize: 8,
                               fontWeight: FontWeight.w500,
-                              color: const Color(0xFF505050),
+                              color: AppColors.badgeText,
                             ),
                           ),
                         ),
 
                         const SizedBox(height: 8),
-                        const Divider(color: Color(0xFFDADADA), height: 1),
+                        const Divider(color: AppColors.divider, height: 1),
                         const SizedBox(height: 8),
 
                         // Offers & Items Row
@@ -178,7 +181,7 @@ class NearbyStoresList extends StatelessWidget {
                                       style: GoogleFonts.quicksand(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
-                                        color: const Color(0xFF323232),
+                                        color: AppColors.primaryText,
                                       ),
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -202,7 +205,7 @@ class NearbyStoresList extends StatelessWidget {
                                       style: GoogleFonts.quicksand(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
-                                        color: const Color(0xFF323232),
+                                        color: AppColors.primaryText,
                                       ),
                                       overflow: TextOverflow.ellipsis,
                                     ),

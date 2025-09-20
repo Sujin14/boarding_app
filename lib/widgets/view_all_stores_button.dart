@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,7 @@ class ViewAllStoresButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
-          backgroundColor: const Color(0xFF29D177),
+          backgroundColor: AppColors.primaryGreen,
           padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
         ),
         child: Text(
@@ -21,7 +22,7 @@ class ViewAllStoresButton extends StatelessWidget {
           style: GoogleFonts.roboto(
             fontSize: 16,
             fontWeight: FontWeight.w500,
-            color: Color(0xFFFFFFFF),
+            color: AppColors.whiteText,
           ),
         ),
       ),

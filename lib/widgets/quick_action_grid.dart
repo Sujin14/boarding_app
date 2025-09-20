@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -40,7 +41,7 @@ class QuickActionsGrid extends StatelessWidget {
               Material(
                 elevation: 1,
                 borderRadius: BorderRadius.circular(12),
-                color: Colors.white,
+                color: AppColors.white,
                 child: Container(
                   height: 70,
                   width: 70,
@@ -57,7 +58,6 @@ class QuickActionsGrid extends StatelessWidget {
                           height: 45,
                         ),
                       ),
-
                       if (item.badgeImagePath != null)
                         Positioned(
                           right: 0,
@@ -79,7 +79,11 @@ class QuickActionsGrid extends StatelessWidget {
               const SizedBox(height: 6),
               Text(
                 item.label,
-                style: GoogleFonts.quicksand(fontWeight: FontWeight.w500, fontSize: 14, color: Color(0XFF323232)),
+                style: GoogleFonts.quicksand(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                  color: AppColors.primaryText,
+                ),
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,

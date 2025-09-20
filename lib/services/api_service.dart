@@ -4,14 +4,16 @@ import '../models/notification_model.dart';
 import 'json_parser.dart';
 
 class ApiService {
-  final String apiUrl = 'https://raw.githubusercontent.com/sayanp23/test-api/main/test-notifications.json';
+  final String apiUrl =
+      'https://raw.githubusercontent.com/sayanp23/test-api/main/test-notifications.json';
 
   Future<List<NotificationModel>> fetchNotifications() async {
     try {
       final response = await http.get(Uri.parse(apiUrl));
       if (response.statusCode == 200) {
-        final jsonData = jsonDecode(response.body) as List;
-        return await JsonParser.parseJsonInIsolate(jsonData);
+        final jsonData = jsonDecode(response.body) as Map<String, dynamic>;
+        final dataList = jsonData['data'] as List<dynamic>;
+        return await JsonParser.parseJsonInIsolate(dataList);
       } else {
         throw Exception('Failed to load notifications: ${response.statusCode}');
       }

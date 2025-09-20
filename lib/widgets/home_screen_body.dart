@@ -1,3 +1,4 @@
+import 'package:boarding_app/constants/app_colors.dart';
 import 'package:boarding_app/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -30,7 +31,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.only(left: 16, top: 30),
@@ -46,7 +47,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                 style: GoogleFonts.quicksand(
                   fontWeight: FontWeight.w700,
                   fontSize: 19,
-                  color: Color(0XFF323232)
+                  color: AppColors.primaryText,
                 ),
               ),
               SizedBox(height: 12),
@@ -100,7 +101,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                     style: GoogleFonts.quicksand(
                       fontWeight: FontWeight.w700,
                       fontSize: 14,
-                      color: Color(0xFF06C25E),
+                      color: AppColors.accentGreen,
                     ),
                   ),
                   const SizedBox(width: 5),
@@ -117,7 +118,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                 style: GoogleFonts.quicksand(
                   fontWeight: FontWeight.w700,
                   fontSize: 17,
-                  color: Color(0XFF323232),
+                  color: AppColors.primaryText,
                 ),
               ),
               SizedBox(height: 16),
@@ -137,12 +138,11 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
           ),
         ),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onNavItemTapped,
-        selectedItemColor: Color(0xFF29D177),
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: AppColors.primaryGreen,
+        unselectedItemColor: AppColors.grey,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         items: [
