@@ -1,4 +1,4 @@
-package com.example.boarding_app
+package dev.sujin.boarding_app
 
 import io.flutter.embedding.android.FlutterActivity
 
