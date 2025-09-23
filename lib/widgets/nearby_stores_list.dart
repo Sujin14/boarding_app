@@ -37,9 +37,12 @@ class NearbyStoresList extends StatelessWidget {
 
         const SizedBox(height: 12),
 
-        // Stores List
-        Column(
-          children: List.generate(2, (index) {
+        // Stores List (FIXED)
+        ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: 2,
+          itemBuilder: (context, index) {
             return Container(
               margin: const EdgeInsets.only(bottom: 12),
               padding: const EdgeInsets.all(12),
@@ -70,28 +73,17 @@ class NearbyStoresList extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Store Name
-                        Text(
-                          "Freshly Baker",
-                          style: GoogleFonts.quicksand(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.primaryText,
-                          ),
-                        ),
-                        const SizedBox(height: 2),
-
-                        // Cuisine + Rating + Time
+                        // Store Name + Rating
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
                               child: Text(
-                                "Sweets, North Indian",
+                                "Freshly Baker",
                                 style: GoogleFonts.quicksand(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColors.secondaryText,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                  color: AppColors.primaryText,
                                 ),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -112,16 +104,35 @@ class NearbyStoresList extends StatelessWidget {
                                     color: AppColors.ratingGreyNearby,
                                   ),
                                 ),
-                                const SizedBox(width: 8),
-                                Text(
-                                  "45 mins",
-                                  style: GoogleFonts.quicksand(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                    color: AppColors.timeOrange,
-                                  ),
-                                ),
                               ],
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(height: 2),
+
+                        // Cuisine + Time
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                "Sweets, North Indian",
+                                style: GoogleFonts.quicksand(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: AppColors.secondaryText,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            Text(
+                              "45 mins",
+                              style: GoogleFonts.quicksand(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: AppColors.timeOrange,
+                              ),
                             ),
                           ],
                         ),
@@ -137,6 +148,7 @@ class NearbyStoresList extends StatelessWidget {
                             color: AppColors.secondaryText,
                           ),
                         ),
+
                         const SizedBox(height: 6),
 
                         // Top Store Badge
@@ -221,7 +233,7 @@ class NearbyStoresList extends StatelessWidget {
                 ],
               ),
             );
-          }),
+          },
         ),
       ],
     );
