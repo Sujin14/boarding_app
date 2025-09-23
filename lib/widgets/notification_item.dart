@@ -14,7 +14,7 @@ class NotificationItem extends StatelessWidget {
 
     return Column(
       children: [
-        // 🔹 Notification Card
+        // Notification Card
         Container(
           decoration: BoxDecoration(
             color: AppColors.white,
@@ -85,7 +85,7 @@ class NotificationItem extends StatelessWidget {
           ),
         ),
 
-        // 🔹 Divider after each item
+        // Divider after each item
         const Divider(
           color: AppColors.divider,
           thickness: 1,
